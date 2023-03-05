@@ -1,0 +1,72 @@
+<html>
+<head>
+	<title>Aplikasi Program Kalkulator Sederhana (Javascript)</title>
+</head>
+<body>
+	<h1>Aplikasi Program Kalkulator Sederhana Menggunakan Javascript</h1>
+	<p>Bilangan 1:</p>
+	<!-- Membuat input field untuk bilangan 1 -->
+	<input type="number" id="angka1">
+	<p>Bilangan 2:</p>
+	<!-- Membuat input field untuk bilangan 2 -->
+	<input type="number" id="angka2">
+	<!-- Membuat tombol penjumlahan -->
+	<button onclick="tambah()">+</button>
+	<!-- Membuat tombol pengurangan -->
+	<button onclick="kurang()">-</button>
+	<!-- Membuat tombol perkalian -->
+	<button onclick="kali()">*</button>
+	<!-- Membuat tombol pembagian -->
+	<button onclick="bagi()">/</button>
+	<p>Hasil Hitungan :</p>
+	<!-- Membuat input field untuk menampilkan hasil -->
+	<input type="number" id="hasil">
+
+	<script>
+		// Membuat fungsi untuk pertambahan angka1 dan angka2
+		function tambah() {
+			// Mendapatkan nilai bilangan pertama dari input field dan mengkonversinya ke dalam tipe data float
+			var angka1 = parseFloat(document.getElementById("angka1").value);
+			// Mendapatkan nilai bilangan kedua dari input field dan mengkonversinya ke dalam tipe data float
+			var angka2 = parseFloat(document.getElementById("angka2").value);
+			// Melakukan operasi penjumlahan antara angka1 dan angka2
+			var hasil = angka1 + angka2;
+			// Menampilkan hasil operasi penjumlahan pada input field hasil
+			document.getElementById("hasil").value = hasil;
+		}
+
+		// Membuat fungsi untuk pengurangan angka1 dan angka2
+		function kurang() {
+			var angka1 = parseFloat(document.getElementById("angka1").value);
+			var angka2 = parseFloat(document.getElementById("angka2").value);
+			// Melakukan operasi pengurangan antara angka1 dan angka2
+			var hasil = angka1 - angka2;
+			document.getElementById("hasil").value = hasil;
+		}
+
+		// Membuat fungsi untuk perkalian angka1 dan angka2
+		function kali() {
+			var angka1 = parseFloat(document.getElementById("angka1").value);
+			var angka2 = parseFloat(document.getElementById("angka2").value);
+			// Melakukan operasi perkalian antara angka1 dan angka2
+			var hasil = angka1 * angka2;
+			document.getElementById("hasil").value = hasil;
+		}
+
+		// Membuat fungsi untuk pembagian angka1 dan angka2
+		function bagi() {
+			var angka1 = parseFloat(document.getElementById("angka1").value);
+			var angka2 = parseFloat(document.getElementById("angka2").value);
+			// Melakukan operasi pembagian antara angka1 dan angka2
+			var hasil = angka1 / angka2;
+			document.getElementById("hasil").value = hasil;
+		}
+	</script>
+    <br><br>
+     <script language="Javascript">
+		// document.write() digunakan untuk menulis teks atau nilai pada dokumen HTML.
+		// document.lastModified digunakan untuk mengambil informasi tanggal terakhir kali sebuah dokumen dimodifikasi.
+            document.write("Dimodifikasi terakhir pada" + document.lastModified);
+     </script>
+</body>
+</html>
